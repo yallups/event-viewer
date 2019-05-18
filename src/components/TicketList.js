@@ -8,6 +8,7 @@ export default class TicketList extends React.PureComponent {
   render () {
     const {
       tickets = [],
+      select
     } = this.props;
 
     return (
@@ -16,6 +17,7 @@ export default class TicketList extends React.PureComponent {
           tickets.map((ticket, i) =>
             <Ticket
               key={ticket.id || `ticket-${i}`}
+              onClick={() => select(ticket)}
               {...ticket}
             />
           )
