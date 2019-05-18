@@ -6,10 +6,10 @@ import './layout-a.css';
 const A = (props) => (
   <div className={'layout layout-a'}>
     <section className={'layout-a-content layout-a-left'}>
-      {props.left}
+      <props.left />
     </section>
     <section className={'layout-a-content layout-a-right'}>
-      {props.right}
+      <props.right />
     </section>
   </div>
 );

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class EventContent extends React.Component {
+export default class EventContent extends React.PureComponent {
   render () {
     return (
       <div className={'eventcontent'} >

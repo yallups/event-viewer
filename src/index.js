@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import shownEvent from './temp-api/mock.event.json'
-import inventory from './temp-api/mock.inventory.json'
-
 ReactDOM.render(
-  <App
-    event={shownEvent}
-    tickets={inventory.listing}
-  />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 
