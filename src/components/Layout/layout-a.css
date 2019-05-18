@@ -1,0 +1,17 @@
+.layout-a {
+    flex-direction: row;
+}
+
+.layout-a-content {
+    border: solid #392370;
+    margin: 10px;
+    padding: 10px;
+}
+
+layout-a-left {
+    width: 20%
+}
+
+layout-a-right {
+    width: 80%
+}
