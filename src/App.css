@@ -1,13 +1,29 @@
 .App {
 }
 
+.App-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
 .App-header-logo {
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-size: cover;
-  background-position: 0 97.1%;
-  background: url(https://www.stubhub.com/bfx/static/media/stubhub-logo-merch-purple.091ddb4e.svg) no-repeat;
-  width: 96px;
-  height: 44px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-size: cover;
+    background: url(https://www.stubhub.com/bfx/static/media/stubhub-logo-merch-purple.091ddb4e.svg) no-repeat;
+    width: 113px;
+    height: 44px;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Search.css'
+
 const basePlaceholderText = 'Search';
 
 export default class Search extends React.PureComponent {
@@ -29,7 +31,7 @@ export default class Search extends React.PureComponent {
     const { placeholderText } = this.state;
 
     return (
-      <input
+      <input className={'search-input'}
         placeholder={placeholderText}
         onMouseEnter={this.handleOnHover}
         onMouseLeave={this.handleOffHover}
