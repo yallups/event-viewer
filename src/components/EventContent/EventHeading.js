@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from "prop-types";
 
 const EventHeading = ({name, date}) => (
-  <div>
-    <h2>
+  <>
+    <h2 className={'eventcontent-heading-heading'}>
       {name}
     </h2>
-    <span>
+    <span className={'eventcontent-heading-date'}>
       {date}
     </span>
-  </div>
+  </>
 );
 
 EventHeading.propTypes = {

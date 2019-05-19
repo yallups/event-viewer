@@ -1,0 +1,6 @@
+.eventcontent-venue-address {
+    font-style: italic;
+}
+.eventcontent-venue-address .address-line {
+    display: block;
+}

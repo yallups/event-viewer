@@ -1,41 +1,41 @@
 import React from 'react'
 import PropTypes from "prop-types";
+import Address from '../shared/Address';
 
+import './Venus.css';
 
-// TODO: this use an Address component with proper semantics
-const Venue = ({venue}) => (
-  <ul>
-    <li>
-      <a href={venue.webURI} > {venue.name}></a>
-    </li>
-    <li>
-      {venue.address1}
-    </li>
-    <li>
-      {venue.locality}
-    </li>
-    <li>
-      {venue.postalCode}
-    </li>
-    <li>
-      {venue.state}
-    </li>
-    <li>
-      {venue.country}
-    </li>
-  </ul>
-);
+const Venue = ({webURI, name, ...rest}) => {
+  const {
+    address1,
+    locality,
+    postalCode,
+    state,
+    country,
+  } = rest;
+  return (
+    <div className={'eventcontent-venue'}>
+      <h3>
+        <a href={webURI}>{name}></a>
+      </h3>
+      <Address className={'eventcontent-venue-address'} {...{
+        address1,
+        locality,
+        postalCode,
+        state,
+        country,
+      }} />
+    </div>
+  );
+}
 
 Venue.propTypes = {
-  venue: PropTypes.shape({
-    name: PropTypes.string,
-    webURL: PropTypes.string,
-    address1: PropTypes.string,
-    locality: PropTypes.string,
-    postalCode: PropTypes.string,
-    state: PropTypes.string,
-    country: PropTypes.string,
-  }),
+  name: PropTypes.string,
+  webURL: PropTypes.string,
+  address1: PropTypes.string,
+  locality: PropTypes.string,
+  postalCode: PropTypes.string,
+  state: PropTypes.string,
+  country: PropTypes.string,
 };
 
 export default Venue

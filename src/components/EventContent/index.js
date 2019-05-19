@@ -27,13 +27,12 @@ const slickSettings = {
 export default class EventContent extends React.PureComponent {
   render () {
     const {
-      name, date,
+      name, eventDateLocal,
       performers,
       images = [],
       venue
     } = this.props;
 
-    console.log(images)
 
     // TODO: replace img with a more robust image component
     return (
@@ -52,9 +51,12 @@ export default class EventContent extends React.PureComponent {
           </Slick>
         </div>
         <div className={'eventcontent-content'} >
-          <EventHeading {...{ name, date }} />
-          <Performers {...{ performers }} />
-          <Venue {...{ venue }} />
+          <EventHeading {...{
+            name,
+            date: eventDateLocal
+          }} />
+          <Performers performers={performers} />
+          <Venue {...venue} />
         </div>
       </div>
     )
@@ -64,7 +66,9 @@ export default class EventContent extends React.PureComponent {
 Event.propTypes = {
   ...EventHeading.propTypes,
   ...Performers.propTypes,
-  ...Venue.propTypes,
+  venue: PropTypes.shape({
+    ...Venue.propTypes,
+  }),
   images: PropTypes.arrayOf(PropTypes.shape({
     url: PropTypes.string,
     height: PropTypes.string,
