@@ -1,5 +1,12 @@
+.layout {
+    max-width: 1200px; /* arbitrary */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .layout-a {
     flex-direction: row;
+    max-width: 1200px;
 }
 
 .layout-a-content {
@@ -8,10 +15,10 @@
     padding: 10px;
 }
 
-layout-a-left {
-    width: 20%
+.layout-a-left {
+    max-width: 20%
 }
 
-layout-a-right {
-    width: 80%
+.layout-a-right {
+    max-width: 80%;
 }

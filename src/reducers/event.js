@@ -2,7 +2,7 @@
 import shownEvent from '../temp-api/mock.event.json'
 
 const initialState = {
-  event: shownEvent,
+  ...shownEvent,
 };
 
 

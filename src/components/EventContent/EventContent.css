@@ -1,0 +1,37 @@
+.eventcontent {
+    position: relative;
+    min-height: 700px; /* arbitrary */
+}
+
+.eventcontent-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #392370;
+
+    height: 100%;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.eventcontent-background .slick-slider {
+    opacity: .1;
+}
+
+.eventcontent-background .slick-slide img {
+    height: auto;
+    width: auto;
+}
+
+.eventcontent-content {
+    color: #FFFFFF;
+    padding: 5px 10px;
+}
+
+.eventcontent-content a {
+    color: #FFFFFF;
+}
+

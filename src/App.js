@@ -3,7 +3,7 @@ import './App.css';
 import Search from "./components/Search";
 import Layout from "./components/Layout";
 import TicketList from "./containers/TicketList";
-import EventContent from "./components/EventContent";
+import EventContent from "./containers/EventContent";
 
 
 function App() {
