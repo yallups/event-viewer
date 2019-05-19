@@ -2,6 +2,8 @@ import React from 'react'
 import Ticket from './Ticket';
 import PropTypes from 'prop-types'
 
+import './TicketList.css'
+
 export default class TicketList extends React.PureComponent {
   // TODO: indicate selected and notify when a selection happens
 
@@ -12,7 +14,7 @@ export default class TicketList extends React.PureComponent {
     } = this.props;
 
     return (
-      <div className={'ticketlist'} >
+      <ul className={'ticketlist'} >
         {
           tickets.map((ticket, i) =>
             <Ticket
@@ -22,7 +24,7 @@ export default class TicketList extends React.PureComponent {
             />
           )
         }
-      </div>
+      </ul>
     )
   }
 }

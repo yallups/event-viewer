@@ -1,3 +1,7 @@
+.ticket {
+    cursor: pointer;
+}
 .ticket-selected {
-    border: solid 1px #392370;
+    color: #392370;
+    text-decoration: underline;
 }
