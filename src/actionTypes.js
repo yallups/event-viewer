@@ -1,1 +1,2 @@
 export const SELECT_TICKET = "SELECT_TICKET";
+export const UNSELECT_TICKET = "UNSELECT_TICKET";

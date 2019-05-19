@@ -9,7 +9,8 @@ export default class TicketList extends React.PureComponent {
   render () {
     const {
       tickets = [],
-      select
+      select,
+      unselect
     } = this.props;
 
     // TODO: would be better to take the title out of this component or have the listing functionality be a separate component
@@ -21,7 +22,7 @@ export default class TicketList extends React.PureComponent {
             tickets.map((ticket, i) =>
               <Ticket
                 key={ticket.id || `ticket-${i}`}
-                onClick={() => select(ticket)}
+                onClick={() => ticket.selected ? unselect(ticket) : select(ticket)}
                 {...ticket}
               />
             )

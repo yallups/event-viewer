@@ -1,4 +1,4 @@
-import {SELECT_TICKET} from "../actionTypes";
+import {SELECT_TICKET, UNSELECT_TICKET} from "../actionTypes";
 import mapTickets from '../helpers/mapTickets'
 
 //temporary
@@ -18,6 +18,12 @@ const inventory = (state = initialState, action) => {
       return {
         ...state,
         selectedTicket: action.id
+      }
+    }
+    case UNSELECT_TICKET: {
+      return {
+        ...state,
+        selectedTicket: null
       }
     }
     default: {
