@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from "prop-types";
 import Address from '../shared/Address';
 
-import './Venus.css';
+import './Venue.css';
 
+// TODO: probably should make the address passing a bit nicer. could be its own object. Then wouldnt need to pull it out
+// and put it back together.
 const Venue = ({webURI, name, ...rest}) => {
   const {
     address1,
@@ -26,7 +28,7 @@ const Venue = ({webURI, name, ...rest}) => {
       }} />
     </div>
   );
-}
+};
 
 Venue.propTypes = {
   name: PropTypes.string,

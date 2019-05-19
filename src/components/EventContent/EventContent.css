@@ -1,3 +1,14 @@
+
+/*
+Event content has a lot more that can get structured.
+in particular the images currently shown in a background like carousel are semantically questionable.
+I suspect that these are images that may be desired to be shown to the user and viewed by the user and
+therefore should probably remain as `img` tags. However I have taken the artistic liberty to make them appear as a
+background to the content for this page, in which case it would be better suited to use the image urls and assign
+backgrounds in style. By doing this it would be easier to manage the content overlapping and styling of fitting
+the images to make a more consistent background.
+ */
+
 .eventcontent {
     position: relative;
     min-height: 700px; /* arbitrary */

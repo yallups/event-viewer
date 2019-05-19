@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import './TicketList.css'
 
 export default class TicketList extends React.PureComponent {
-  // TODO: indicate selected and notify when a selection happens
 
   render () {
     const {
@@ -13,22 +12,26 @@ export default class TicketList extends React.PureComponent {
       select
     } = this.props;
 
+    // TODO: would be better to take the title out of this component or have the listing functionality be a separate component
     return (
-      <ul className={'ticketlist'} >
-        {
-          tickets.map((ticket, i) =>
-            <Ticket
-              key={ticket.id || `ticket-${i}`}
-              onClick={() => select(ticket)}
-              {...ticket}
-            />
-          )
-        }
-      </ul>
+      <>
+        <h2>Tickets</h2>
+        <ul className={'ticketlist'} >
+          {
+            tickets.map((ticket, i) =>
+              <Ticket
+                key={ticket.id || `ticket-${i}`}
+                onClick={() => select(ticket)}
+                {...ticket}
+              />
+            )
+          }
+        </ul>
+      </>
     )
   }
 }
 
 TicketList.propTypes = {
-  tickets: PropTypes.array.isRequired
-}
+  tickets: PropTypes.arrayOf(PropTypes.shape(Ticket.propTypes)).isRequired
+};

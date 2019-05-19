@@ -17,8 +17,7 @@ export default function Ticket (props) {
   const amount = price.amount.toFixed(2);
 
   return (
-    <li
-      className={classnames('ticket', {'ticket-selected': selected})} >
+    <li className={classnames('ticket', {'ticket-selected': selected})} >
       <a className={'ticket-anchor'}
          onClick={onClick}
          href={href} >

@@ -71,6 +71,7 @@ Event.propTypes = {
   }),
   images: PropTypes.arrayOf(PropTypes.shape({
     url: PropTypes.string,
+    alt: PropTypes.string,
     height: PropTypes.string,
     width: PropTypes.string,
   }))

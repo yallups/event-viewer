@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 
-// TODO: this use an Address component with proper semantics
+// TODO: this is loosely structured at the moment but should be a component with proper semantics.
 const Address = ({className, ...props}) => (
   <div className={classnames(className, 'address')}>
     {Object.keys(props).map(addressLine => (
@@ -10,6 +10,6 @@ const Address = ({className, ...props}) => (
       </span>
     ))}
   </div>
-)
+);
 
 export default Address
